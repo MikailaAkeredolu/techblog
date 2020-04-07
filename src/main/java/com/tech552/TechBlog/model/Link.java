@@ -2,10 +2,9 @@ package com.tech552.TechBlog.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 @Entity
 @RequiredArgsConstructor
@@ -18,58 +17,16 @@ public class Link {
     @GeneratedValue
     private Long id;
 
+    @NonNull
     private String title;
+
+    @NonNull
     private String url;
 
-//    public Link() {
-//    }
-//
-//    //comment
-//
-//
-//    public Long getId() {
-//        return id;
-//    }
-//
-//    public void setId(Long id) {
-//        this.id = id;
-//    }
-//
-//    public String getTitle() {
-//        return title;
-//    }
-//
-//    public void setTitle(String title) {
-//        this.title = title;
-//    }
-//
-//    public String getUrl() {
-//        return url;
-//    }
-//
-//    public void setUrl(String url) {
-//        this.url = url;
-//    }
+    //get list of comments
+    @OneToMany(mappedBy = "link")    //one link mapped to Many comments
+    private List<Comment> comments = new ArrayList<>();
 
-//    @Override
-//    public String toString() {
-//        return "Link{" +
-//                "id=" + id +
-//                ", title='" + title + '\'' +
-//                '}';
-//    }
 
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//        Link link = (Link) o;
-//        return id.equals(link.id) &&
-//                title.equals(link.title);
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        return Objects.hash(id, title);
-//    }
+
 }
