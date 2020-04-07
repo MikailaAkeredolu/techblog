@@ -8,7 +8,7 @@ public class TechBlogApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TechBlogApplication.class, args);
-		System.out.println("welcome branch updated");
+		System.out.println("welcome branch updated again for demo");
 	}
 
 }
