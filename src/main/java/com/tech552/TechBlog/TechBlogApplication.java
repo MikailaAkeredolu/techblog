@@ -12,3 +12,11 @@ public class TechBlogApplication {
 	}
 
 }
+/*
+New feature - git branch branchName
+git add .
+git commit
+git checkout master
+git merge branchName
+git push
+ */
