@@ -11,7 +11,7 @@ import java.util.Objects;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Link {
+public class Link extends Auditable{
 
     @Id
     @GeneratedValue
