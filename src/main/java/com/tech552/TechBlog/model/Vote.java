@@ -20,4 +20,8 @@ public class Vote {
 
     private Integer vote;
 
+    //user
+
+    //link
+
 }
